@@ -3,13 +3,13 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copy package files
-COPY backend/package*.json ./
+COPY back-end/package*.json ./
 
 # Install dependencies
 RUN npm install
 
 # Copy app source
-COPY backend/ .
+COPY back-end/ .
 
 # Set environment variables
 ENV NODE_ENV=production
